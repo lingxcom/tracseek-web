@@ -1,160 +1,174 @@
-# JT808V3 Frontend
+# TracSeek
 
-基于 Vue 3 + Vite + Element Plus 的车辆监控前端，面向 JT/T 808 与 JT/T 1078 场景，包含实时定位、轨迹回放、视频监控、统计报表、系统管理与多语言支持。
+<p>
+    <img src="https://img.shields.io/badge/License-Apache 2.0-green.svg"/>
+    <img src="https://img.shields.io/badge/platform-linux%20|%20macos%20|%20windows-blue.svg" />
+    <img src="https://img.shields.io/badge/Email-283853318@qq.com-blue"/>
+</p>
 
-## 技术栈
+TracSeek is a vehicle monitoring frontend built with Vue 3 + Vite + Element Plus. It is designed for JT/T 808 and JT/T 1078 scenarios, including real-time positioning, track playback, video monitoring, statistical reports, system management, and multilingual support.
 
-- Vue 3（Composition API）
+## Backend repository
+* Gitee ：[https://gitee.com/lingxcom/jt808](https://gitee.com/lingxcom/jt808)
+* Github ：[https://github.com/lingxcom/tracseek](https://github.com/lingxcom/tracseek)
+
+## Frontend repository
+
+* Gitee ：[https://gitee.com/lingxcom/vue3](https://gitee.com/lingxcom/vue3)
+* Github ：[https://github.com/lingxcom/tracseek-web](https://github.com/lingxcom/tracseek-web)
+
+## Tech Stack
+
+- Vue 3 (Composition API)
 - Vite 5
 - Vue Router 4
 - Element Plus
 - vue-i18n
 - Axios
-- Maptalks（地图）
-- ECharts（图表）
-- mpegts.js（视频流）
+- Maptalks (map rendering)
+- ECharts (charts)
+- mpegts.js (video streaming)
 
-## 主要功能模块
+## Main Functional Modules
 
-- 认证与入口
-  - 登录、注册、Token 登录
-  - 登录状态基于 `sessionStorage.isLogin`
-- 监控与地图（JT808）
-  - 实时定位、分组监控
-  - 轨迹回放（单车/多车/抽稀）
-  - 实时报文（WebSocket）
-- 管理中心 
-- 报表
-  - 里程统计（日/月）
-  - 离线统计、报警统计
-- 系统
-  - 用户管理、角色管理
-  - 登录日志、操作日志
-  - 运行状态、API监控
+- Authentication and entry
+  - Login, registration, token-based login
+  - Login state is based on `sessionStorage.isLogin`
+- Monitoring and map (JT808)
+  - Real-time positioning and group monitoring
+  - Track playback (single vehicle / multiple vehicles / sparse sampling)
+  - Real-time messages (WebSocket)
+- Management center
+- Reports
+  - Mileage statistics (daily/monthly)
+  - Offline statistics and alarm statistics
+- System
+  - User management and role management
+  - Login logs and operation logs
+  - Runtime status and API monitoring
 
-## 快速开始
+## Quick Start
 
-### 1) 安装依赖
+### 1) Install dependencies
 
 ```bash
 npm install
 ```
 
-### 2) 本地开发
+### 2) Local development
 
 ```bash
 npm run dev
 ```
 
-默认脚本为 `vite --host 0.0.0.0`，可被局域网设备访问。
+The default script is `vite --host 0.0.0.0`, so it can be accessed by devices on the local network.
 
-### 3) 生产构建
+### 3) Production build
 
 ```bash
 npm run build
 ```
 
-### 4) 预览构建产物
+### 4) Preview build output
 
 ```bash
 npm run preview
 ```
 
-## 路由与鉴权说明
+## Routing and Authentication
 
-- 路由入口：`src/router/index.js`
-- 主框架页：`/main`，子路由承载业务页面
-- 鉴权逻辑：全局前置守卫读取 `sessionStorage.isLogin === "true"`
-- 未登录访问受保护路由时跳转 `/login`
+- Router entry: `src/router/index.js`
+- Main layout page: `/main`, with child routes for business pages
+- Auth logic: global `beforeEach` guard checks `sessionStorage.isLogin === "true"`
+- Unauthenticated access to protected routes redirects to `/login`
 
-## 接口与 WebSocket 配置
+## API and WebSocket Configuration
 
-配置文件：`public/static/js/config.js`
+Config file: `public/static/js/config.js`
 
-- 运行时会向 `window` 注入：
+- Injected into `window` at runtime:
   - `window.apiUrl`
   - `window.wsUrl`
   - `window.uploadUrl`
-- 本地开发（localhost / 127.0.0.1）会自动拼接本机地址
-- 当 host 包含 `5173` 时，默认改指向 `127.0.0.1:8800`（便于前后端分离联调）
+- In local development (`localhost` / `127.0.0.1`), local host addresses are auto-generated
+- When the host contains `5173`, it defaults to `127.0.0.1:8800` (for frontend-backend local integration)
 
-API 调用封装：`src/hooks/api.js`
+API wrapper: `src/hooks/api.js`
 
-- 统一通过 `axios.post(window.apiUrl, JSON.stringify(params))`
-- 自动注入：
-  - `lingxtoken`（来自 `sessionStorage.token`）
-  - `language`（当前 i18n 语言）
-- `code == 40001` 自动跳转登录
-- `code == 40002` 提示无权限
+- Unified API call via `axios.post(window.apiUrl, JSON.stringify(params))`
+- Automatically injects:
+  - `lingxtoken` (from `sessionStorage.token`)
+  - `language` (current i18n locale)
+- `code == 40001` automatically redirects to login
+- `code == 40002` shows a no-permission message
 
-## 多语言（i18n）规范
+## Multilingual (i18n) Guidelines
 
-语言入口：`src/lang/index.js`
+Language entry: `src/lang/index.js`
 
-- 已内置多语言（如 `zh-CN`, `en-US`, `ja-JP`, `ko-KR` 等）
-- 语言切换项由 `LOCALE_OPTIONS` 管理
-- Element Plus 语言包在 `src/App.vue` 中按当前语言映射
+- Multiple locales are built in (such as `zh-CN`, `en-US`, `ja-JP`, `ko-KR`, etc.)
+- Locale switch options are managed by `LOCALE_OPTIONS`
+- Element Plus locale packs are mapped by current language in `src/App.vue`
 
-新增文案时请遵循：
+When adding new copy, follow these rules:
 
-1. 页面内禁止硬编码展示文本，统一使用 `t('...')`
-2. 在所有 `src/lang/*/index.js` 中补齐同名 key
-3. key 命名建议按模块分层，例如：
+1. Do not hardcode display text in pages; always use `t('...')`
+2. Add the same key to all `src/lang/*/index.js` locale files
+3. Key naming is recommended to be module-based, for example:
    - `el.main.*`
    - `el.report.*`
    - `el.jt808.*`
 
-## 目录结构（核心）
+## Directory Structure (Core)
 
 ```text
 src/
-  main.js                 # 应用入口
-  App.vue                 # 全局壳 + Element Plus locale
+  main.js                 # App entry
+  App.vue                 # Global shell + Element Plus locale
   router/
-    index.js              # 路由与守卫
+    index.js              # Routes and guards
   lang/
-    index.js              # i18n 注册
-    */index.js            # 多语言词条
+    index.js              # i18n registration
+    */index.js            # Locale entries
   hooks/
-    api.js                # 统一 API 调用
-    lingx.js              # 工具函数集合
+    api.js                # Unified API calls
+    lingx.js              # Utility function collection
   views/
     Login.vue
     Main.vue
     Home.vue
-    jt808/                # 定位、轨迹、报文等
-    jt1078/               # 视频相关
-    report/               # 统计报表
-    lingx/                # 系统能力页
+    jt808/                # Positioning, tracks, messages, etc.
+    report/               # Statistical reports
+    lingx/                # System capability pages
 public/
-  static/js/config.js     # 运行时 api/ws/upload 地址配置
+  static/js/config.js     # Runtime api/ws/upload endpoint config
 ```
 
-## 构建与资源输出说明
+## Build and Asset Output
 
-`vite.config.js` 已配置打包产物命名规则：
+`vite.config.js` defines output naming rules:
 
 - JS: `js/[hash].js`
-- 资源: `[ext]/[hash].[ext]`
+- Assets: `[ext]/[hash].[ext]`
 
-便于静态资源缓存与发布。
+This is helpful for static asset caching and deployment.
 
-## 常见问题
+## FAQ
 
-### 1) 页面提示“连不上接口 / WebSocket 失败”
+### 1) "Cannot connect to API / WebSocket failed"
 
-优先检查：
+Check these first:
 
-- `public/static/js/config.js` 生成的 `window.apiUrl` / `window.wsUrl`
-- 浏览器控制台与 Network 的实际请求地址、状态码、证书错误
-- 后端服务端口是否可达（本地联调常见 8800 未启动）
+- `window.apiUrl` / `window.wsUrl` generated by `public/static/js/config.js`
+- Actual request URL, status code, and certificate errors in browser Console and Network tabs
+- Whether backend service ports are reachable (common in local integration: port 8800 not started)
 
-### 2) 登录后又被踢回登录页
+### 2) Redirected back to login after login
 
-检查 `sessionStorage.isLogin` 是否被正确写入 `"true"`，以及 token 是否过期。
+Check whether `sessionStorage.isLogin` is correctly written as `"true"` and whether the token has expired.
 
-## 开发建议
+## Development Suggestions
 
-- 提交前至少验证：登录、主菜单、一个 JT808 页面、一个报表页面
-- 新增页面优先复用现有 `lingx` 组件体系，避免重复造轮子
-- 若改动文案，务必同步全量语言文件，避免运行时 key 缺失
+- Before committing, at minimum verify: login, main menu, one JT808 page, and one report page
+- Reuse the existing `lingx` component system when adding pages to avoid duplicate implementations
+- If copy text changes, sync all language files to avoid missing keys at runtime
