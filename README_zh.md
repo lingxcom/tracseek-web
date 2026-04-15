@@ -10,13 +10,13 @@
 
 
 ## 后端代码仓库
-* Gitee ：[https://gitee.com/lingxcom/jt808](https://gitee.com/lingxcom/jt808)
-* Github ：[https://github.com/lingxcom/tracseek](https://github.com/lingxcom/jt808)
+* Gitee ：[https://gitee.com/lingxcom/tracseek](https://gitee.com/lingxcom/tracseek)
+* Github ：[https://github.com/lingxcom/tracseek](https://github.com/lingxcom/tracseek)
 
 ## 前端代码仓库
 
-* Gitee仓库地址：[https://gitee.com/lingxcom/vue3](https://gitee.com/lingxcom/vue3)
-* Github仓库地址：[https://github.com/lingxcom/tracseek-vue3](https://github.com/lingxcom/tracseek-vue3)
+* Gitee仓库地址：[https://gitee.com/lingxcom/tracseek-web](https://gitee.com/lingxcom/tracseek-web)
+* Github仓库地址：[https://github.com/lingxcom/tracseek-web](https://github.com/lingxcom/tracseek-web)
 
 ## 技术栈
 
