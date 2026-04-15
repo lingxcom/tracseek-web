@@ -1,0 +1,35 @@
+@import './base.css';
+#app {
+    font-family: Microsoft YaHei, 微软雅黑, Microsoft JhengHei, 华文细黑, STHeiti, MingLiu;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#lgxinfo{
+	height: 40px;
+	background-color:rgba(0, 0, 0, 0.5);;
+	color: #fff;
+	font-size: 14px;
+	line-height: 40px;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	padding: 0px 20px;
+	z-index: 99999;
+}
+.current-row > td{
+	background-color: #dfe8f6 !important;
+}
+.is-current > div:first-child{
+	background-color: #dfe8f6 !important;
+}
+  .noselect{
+    -webkit-user-select:none;
+       -moz-user-select:none;
+       -ms-user-select:none;
+       user-select:none;
+  }
+
+.lingx-loading{
+	opacity:0.3;
+	z-index: 9999 !important;
+ }
