@@ -13,9 +13,12 @@ TracSeek is a vehicle monitoring frontend built with Vue 3 + Vite + Element Plus
 * Github ：[https://github.com/lingxcom/tracseek](https://github.com/lingxcom/tracseek)
 
 ## Frontend repository
-
 * Gitee ：[https://gitee.com/lingxcom/tracseek-web](https://gitee.com/lingxcom/tracseek-web)
 * Github ：[https://github.com/lingxcom/tracseek-web](https://github.com/lingxcom/tracseek-web)
+
+## Download
+* Gitee ：[https://gitee.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip](https://gitee.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip)
+* Github ：[https://github.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip](https://github.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip)
 
 ## Tech Stack
 

@@ -8,7 +8,6 @@
 
 基于 Vue 3 + Vite + Element Plus 的车辆监控前端，面向 JT/T 808 与 JT/T 1078 场景，包含实时定位、轨迹回放、视频监控、统计报表、系统管理与多语言支持。
 
-
 ## 后端代码仓库
 * Gitee ：[https://gitee.com/lingxcom/tracseek](https://gitee.com/lingxcom/tracseek)
 * Github ：[https://github.com/lingxcom/tracseek](https://github.com/lingxcom/tracseek)
@@ -18,6 +17,9 @@
 * Gitee仓库地址：[https://gitee.com/lingxcom/tracseek-web](https://gitee.com/lingxcom/tracseek-web)
 * Github仓库地址：[https://github.com/lingxcom/tracseek-web](https://github.com/lingxcom/tracseek-web)
 
+## 软件下载
+* Gitee ：[https://gitee.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip](https://gitee.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip)
+* Github ：[https://github.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip](https://github.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip)
 ## 技术栈
 
 - Vue 3（Composition API）
