@@ -1,4 +1,4 @@
-# TracSeek
+# TracSeek（领新北斗） — Scalable JT808 Vehicle Tracking Platform
 
 > TracSeek is a vehicle monitoring frontend built with Vue 3 + Vite + Element Plus. It is designed for JT/T 808 scenarios, including real-time positioning, track playback, device management,rule management, statistical reports, system management, and multilingual support.
 
