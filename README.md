@@ -2,25 +2,6 @@
 
 > TracSeek is a vehicle monitoring frontend built with Vue 3 + Vite + Element Plus. It is designed for JT/T 808 scenarios, including real-time positioning, track playback, device management,rule management, statistical reports, system management, and multilingual support.
 
-## Backend repository
-* Gitee ：[https://gitee.com/lingxcom/tracseek](https://gitee.com/lingxcom/tracseek)
-* Github ：[https://github.com/lingxcom/tracseek](https://github.com/lingxcom/tracseek)
-
-## Frontend repository
-* Gitee ：[https://gitee.com/lingxcom/tracseek-web](https://gitee.com/lingxcom/tracseek-web)
-* Github ：[https://github.com/lingxcom/tracseek-web](https://github.com/lingxcom/tracseek-web)
-
-## Tech Stack
-
-- Vue 3 (Composition API)
-- Vite 5
-- Vue Router 4
-- Element Plus
-- vue-i18n
-- Axios
-- Maptalks 
-- ECharts
-
 ## Quick Start
 
 ### 1. Clone repository
@@ -44,6 +25,25 @@ http://localhost:8800
 Account:admin
 Password:123456
 ```
+## Backend repository
+* Gitee ：[https://gitee.com/lingxcom/tracseek](https://gitee.com/lingxcom/tracseek)
+* Github ：[https://github.com/lingxcom/tracseek](https://github.com/lingxcom/tracseek)
+
+## Frontend repository
+* Gitee ：[https://gitee.com/lingxcom/tracseek-web](https://gitee.com/lingxcom/tracseek-web)
+* Github ：[https://github.com/lingxcom/tracseek-web](https://github.com/lingxcom/tracseek-web)
+
+## Tech Stack
+
+- Vue 3 (Composition API)
+- Vite 5
+- Vue Router 4
+- Element Plus
+- vue-i18n
+- Axios
+- Maptalks 
+- ECharts
+
 
 ## Routing and Authentication
 

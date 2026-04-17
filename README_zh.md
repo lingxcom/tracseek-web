@@ -2,6 +2,23 @@
 
 >  基于 Vue 3 + Vite + Element Plus 的车辆监控前端，面向 JT/T 808 位置服务场景，包含实时定位、轨迹回放、设备管理、规则管理、统计报表、系统管理与多语言支持。
 
+## 快速开始
+
+```bash
+git clone https://gitee.com/lingxcom/tracseek.git
+cd tracseek
+git clone https://gitee.com/lingxcom/tracseek-web.git
+docker compose up -d
+```
+启动后访问：
+
+```bash
+http://localhost:8800
+账号：admin
+密码：123456
+```
+
+
 ## 后端代码仓库
 * Gitee ：[https://gitee.com/lingxcom/tracseek](https://gitee.com/lingxcom/tracseek)
 * Github ：[https://github.com/lingxcom/tracseek](https://github.com/lingxcom/tracseek)
@@ -20,23 +37,6 @@
 - Axios
 - Maptalks
 - ECharts
-
-## 快速开始
-
-```bash
-git clone https://gitee.com/lingxcom/tracseek.git
-cd tracseek
-git clone https://gitee.com/lingxcom/tracseek-web.git
-docker compose up -d
-```
-启动后访问：
-
-```bash
-http://localhost:8800
-账号：admin
-密码：123456
-```
-
 
 ## 路由与鉴权说明
 
