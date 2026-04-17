@@ -1,12 +1,6 @@
 # TracSeek
 
-<p>
-    <img src="https://img.shields.io/badge/License-Apache 2.0-green.svg"/>
-    <img src="https://img.shields.io/badge/platform-linux%20|%20macos%20|%20windows-blue.svg" />
-    <img src="https://img.shields.io/badge/Email-283853318@qq.com-blue"/>
-</p>
-
-TracSeek is a vehicle monitoring frontend built with Vue 3 + Vite + Element Plus. It is designed for JT/T 808 and JT/T 1078 scenarios, including real-time positioning, track playback, video monitoring, statistical reports, system management, and multilingual support.
+> TracSeek is a vehicle monitoring frontend built with Vue 3 + Vite + Element Plus. It is designed for JT/T 808 scenarios, including real-time positioning, track playback, device management,rule management, statistical reports, system management, and multilingual support.
 
 ## Backend repository
 * Gitee ：[https://gitee.com/lingxcom/tracseek](https://gitee.com/lingxcom/tracseek)
@@ -16,10 +10,6 @@ TracSeek is a vehicle monitoring frontend built with Vue 3 + Vite + Element Plus
 * Gitee ：[https://gitee.com/lingxcom/tracseek-web](https://gitee.com/lingxcom/tracseek-web)
 * Github ：[https://github.com/lingxcom/tracseek-web](https://github.com/lingxcom/tracseek-web)
 
-## Download
-* Gitee ：[https://gitee.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip](https://gitee.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip)
-* Github ：[https://github.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip](https://github.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip)
-
 ## Tech Stack
 
 - Vue 3 (Composition API)
@@ -28,54 +18,31 @@ TracSeek is a vehicle monitoring frontend built with Vue 3 + Vite + Element Plus
 - Element Plus
 - vue-i18n
 - Axios
-- Maptalks (map rendering)
-- ECharts (charts)
-- mpegts.js (video streaming)
-
-## Main Functional Modules
-
-- Authentication and entry
-  - Login, registration, token-based login
-  - Login state is based on `sessionStorage.isLogin`
-- Monitoring and map (JT808)
-  - Real-time positioning and group monitoring
-  - Track playback (single vehicle / multiple vehicles / sparse sampling)
-  - Real-time messages (WebSocket)
-- Management center
-- Reports
-  - Mileage statistics (daily/monthly)
-  - Offline statistics and alarm statistics
-- System
-  - User management and role management
-  - Login logs and operation logs
-  - Runtime status and API monitoring
+- Maptalks 
+- ECharts
 
 ## Quick Start
 
-### 1) Install dependencies
+### 1. Clone repository
 
 ```bash
-npm install
+git clone https://github.com/lingxcom/tracseek.git
+cd tracseek
+git clone https://github.com/lingxcom/tracseek-web.git
 ```
 
-### 2) Local development
+### 2. Start with Docker
 
 ```bash
-npm run dev
+docker compose up -d
 ```
 
-The default script is `vite --host 0.0.0.0`, so it can be accessed by devices on the local network.
-
-### 3) Production build
+### 3. Open in browser
 
 ```bash
-npm run build
-```
-
-### 4) Preview build output
-
-```bash
-npm run preview
+http://localhost:8800
+Account:admin
+Password:123456
 ```
 
 ## Routing and Authentication

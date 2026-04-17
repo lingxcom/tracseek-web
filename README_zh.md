@@ -1,12 +1,6 @@
-# 领新北斗-车辆动态监控系统(TracSeek)
+# 领新北斗(TracSeek)-车辆动态监控系统
 
-<p>
-    <img src="https://img.shields.io/badge/License-Apache 2.0-green.svg"/>
-    <img src="https://img.shields.io/badge/platform-linux%20|%20macos%20|%20windows-blue.svg" />
-    <img src="https://img.shields.io/badge/Email-283853318@qq.com-blue"/>
-</p>
-
-基于 Vue 3 + Vite + Element Plus 的车辆监控前端，面向 JT/T 808 与 JT/T 1078 场景，包含实时定位、轨迹回放、视频监控、统计报表、系统管理与多语言支持。
+>  基于 Vue 3 + Vite + Element Plus 的车辆监控前端，面向 JT/T 808 位置服务场景，包含实时定位、轨迹回放、设备管理、规则管理、统计报表、系统管理与多语言支持。
 
 ## 后端代码仓库
 * Gitee ：[https://gitee.com/lingxcom/tracseek](https://gitee.com/lingxcom/tracseek)
@@ -16,10 +10,6 @@
 
 * Gitee仓库地址：[https://gitee.com/lingxcom/tracseek-web](https://gitee.com/lingxcom/tracseek-web)
 * Github仓库地址：[https://github.com/lingxcom/tracseek-web](https://github.com/lingxcom/tracseek-web)
-
-## 软件下载
-* Gitee ：[https://gitee.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip](https://gitee.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip)
-* Github ：[https://github.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip](https://github.com/lingxcom/tracseek/releases/download/1.1/tracseek.zip)
 ## 技术栈
 
 - Vue 3（Composition API）
@@ -28,55 +18,25 @@
 - Element Plus
 - vue-i18n
 - Axios
-- Maptalks（地图）
-- ECharts（图表）
-- mpegts.js（视频流）
-
-## 主要功能模块
-
-- 认证与入口
-  - 登录、注册、Token 登录
-  - 登录状态基于 `sessionStorage.isLogin`
-- 监控与地图（JT808）
-  - 实时定位、分组监控
-  - 轨迹回放（单车/多车/抽稀）
-  - 实时报文（WebSocket）
-- 管理中心 
-- 报表
-  - 里程统计（日/月）
-  - 离线统计、报警统计
-- 系统
-  - 用户管理、角色管理
-  - 登录日志、操作日志
-  - 运行状态、API监控
+- Maptalks
+- ECharts
 
 ## 快速开始
 
-### 1) 安装依赖
+```bash
+git clone https://gitee.com/lingxcom/tracseek.git
+cd tracseek
+git clone https://gitee.com/lingxcom/tracseek-web.git
+docker compose up -d
+```
+启动后访问：
 
 ```bash
-npm install
+http://localhost:8800
+账号：admin
+密码：123456
 ```
 
-### 2) 本地开发
-
-```bash
-npm run dev
-```
-
-默认脚本为 `vite --host 0.0.0.0`，可被局域网设备访问。
-
-### 3) 生产构建
-
-```bash
-npm run build
-```
-
-### 4) 预览构建产物
-
-```bash
-npm run preview
-```
 
 ## 路由与鉴权说明
 
